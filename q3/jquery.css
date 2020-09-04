@@ -1,0 +1,28 @@
+p,h2,button,ol,span,.designed,.traverse,.btn1,.btn2,#hide,#show{
+  margin-right: 650px;
+  margin-left: 650px;
+
+}
+h1{
+  margin-right: 500px;
+  margin-left: 620px;
+}
+#div1 {
+  height: 50px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+ .blue { color:blue; }
+ hr{
+   border-top: 2px dashed black;
+ }
+ body{
+   background-image: linear-gradient(to left,yellow,lightgreen,yellow)
+ }
+ .selected { color: red; }

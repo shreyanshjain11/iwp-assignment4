@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Validation examples with javascript</title>
+        <link rel="stylesheet" type="text/css" href="assignment4q2.css">
+        <script>
+            function send() {
+                var genders = document.getElementsByName("gender");
+                if (genders[0].checked == true) {
+                    alert("Your gender is male");
+                } else if (genders[1].checked == true) {
+                    alert("Your gender is female");
+                } else {
+                    // no checked
+                    var msg = '<span style="color:red;">You must select your gender!</span><br /><br />';
+                    document.getElementById('msg').innerHTML = msg;
+                    return false;
+                }
+                return true;
+            }
+
+            function reset_msg() {
+                document.getElementById('msg').innerHTML = '';
+            }
+        </script>
+        <script>
+
+
+    function ValidateForm(){
+            var names = document.forms["myForm"]["names"].value;
+            var month = document.forms["myForm"]["month"].value;
+            var year = document.forms["myForm"]["year"].value;
+            
+
+                if (names == null || names ==""){
+                    alert ("name cannot be empty");
+                    return false;
+                    }
+
+                
+                if(month == null || month =="-select month-"){
+                    alert ("month must be selected");
+                    return false;
+                    }
+                
+                if(year == null || year =="-select year-"){
+                    alert ("year must be selected");
+                    return false;
+                    }
+
+
+
+
+}
+            
+</script>
+<script type="text/javascript">
+    var alterDisabledState = function () {
+
+var isMyCheckboxChecked = $('#myCheckbox').is(':checked');
+
+     if (isMyCheckboxChecked) {
+     $('myButton').removeAttr("disabled");
+     } 
+     else {
+             $('myButton').attr("disabled", "disabled");
+             alert("Please check the checkbox.");
+     }
+}
+</script>
+    </head>
+    <body>
+        <div class="radiobtn">
+        <h1>This is Radio Button Example</h1>
+        
+        <form action="" method="POST" id="gender">
+            <label>Gender:</label>
+            <br />
+            <input type="radio" name="gender" value="m" onclick="reset_msg();" />Male
+            <br />
+            <input type="radio" name="gender" value="f" onclick="reset_msg();" />Female
+            <br />
+            <div id="msg"></div>
+            <input type="submit" value="send>>" onclick="return send();" />
+        </form></div>
+        <div class="dropdown">
+        <h1>This is Drop Down list Example</h1>
+        
+        <form enctype="multipart/form-data" name = "myForm" action = "" onsubmit="return ValidateForm()" method = "post" id="month">
+    
+
+    Name: <input name ="names" type = "text" size = "55" maxlength = "100"><br>
+    Month: <select id ="selectmonth" name="month">
+        <option value="">-select month-</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+
+Year:   <select name ="year">
+        <option value = "">-select year-</option>
+        <option value = "2015"> 2015 </option>
+        <option value = "2016"> 2016 </option>
+        <option value = "2017"> 2017 </option>
+    </select>
+<input name = "add_person" type="submit" value = "submit">
+</form></div>
+<div class="checkboxbtn">
+<h1>This is Check Box Example</h1>
+<div id="check">
+<input type="checkbox" id="myCheckbox" />
+<input type="submit" id="myButton" /></div></div>
+    </body>
+</html>

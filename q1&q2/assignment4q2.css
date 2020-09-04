@@ -1,0 +1,24 @@
+.radiobtn, .dropdown, .checkboxbtn{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+
+}
+#gender{
+	margin-right: 500px;
+	margin-left: 500px;
+	border: 5px solid green;
+}
+#month{
+	margin-right: 500px;
+	margin-left: 500px;
+	border: 5px solid blue;
+}
+#check{
+	margin-right: 700px;
+	margin-left: 700px;
+	border: 5px solid red;
+}
+body{
+	background-image: linear-gradient(to left, lightgrey ,grey, lightgrey);
+}
